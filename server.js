@@ -28,5 +28,12 @@ app.get('/api/groceryList', (req, res) => {
 })
 
 app.post('/api/groceryList', (req, res) => {
-    let {}
 })
+
+
+// const port =process.env.PORT || 6050
+
+// app.listen(port, () => console.log(`Server listening ${port}`))
+const port = process.env.PORT || 5050
+
+app.listen(port, () => console.log(`Server listening on ${port}`))
