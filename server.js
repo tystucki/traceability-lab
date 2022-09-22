@@ -39,10 +39,6 @@ app.post('/api/groceryList', (req, res) => {
     const index = item === groceryItem
 })
 
-
-// const port =process.env.PORT || 6050
-
-// app.listen(port, () => console.log(`Server listening ${port}`))
 const port = process.env.PORT || 5050
 
 app.listen(port, () => console.log(`Server listening on ${port}`))
