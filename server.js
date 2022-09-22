@@ -24,10 +24,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/groceryList', (req, res) => {
-    res.status(200).send(students)
+    res.status(200).send(groceryList)
 })
 
 app.post('/api/groceryList', (req, res) => {
+    let {groceryItem} = req.body
 })
 
 
