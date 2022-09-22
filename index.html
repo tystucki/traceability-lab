@@ -14,5 +14,34 @@
     </form>
     <section></section>
 
+    <script src=""></script>
+    <script>
+        const addForm = document.querySelector('form');
+        const itemInput = document.querySelector('input');
+        const container = document.querySelector('section');
+
+        function addInfo(res) {
+            container.innerHTML = ''
+            itemInput.value = ''
+
+            res.data.forEach((listItem, index) => {
+                container.innerHTML += `<p name=${index}>${listItem}</p>`
+            })
+            document.querySelectorAll('p').forEach(element => {
+                const theIndexValue = element.getAttribute('listItem');
+
+                element.addEventListener('click', () => {
+                    axios
+                        .delete(`/api/groceryList/${theIndexValue}`)
+                        .then(res => {
+                            addInfo(res)
+                        })
+                })
+            })
+
+            
+        }
+    </script>
+
 </body>
 </html>
