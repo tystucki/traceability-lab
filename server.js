@@ -17,6 +17,11 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
 
+const controller = require('./controller');
+const {getSuggestions} = controller;
+
+app.get('./api/suggestions', getSuggestions )
+
 const groceryList = ['Buns', 'Ground Beef', 'Lettuce', 'Cheese', 'Mayonnaise', 'Soda', 'Chips']
 console.log(groceryList)
 
@@ -30,6 +35,8 @@ app.get('/api/groceryList', (req, res) => {
 
 app.post('/api/groceryList', (req, res) => {
     let {groceryItem} = req.body
+
+    const index = item === groceryItem
 })
 
 
