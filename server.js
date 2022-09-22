@@ -17,10 +17,10 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log('Hello world!')
 
-const controller = require('./controller');
-const {getSuggestions} = controller;
+// const controller = require('./controller');
+// const {getSuggestions} = controller;
 
-app.get('./api/suggestions', getSuggestions )
+// app.get('./api/suggestions', getSuggestions )
 
 const groceryList = ['Buns', 'Ground Beef', 'Lettuce', 'Cheese', 'Mayonnaise', 'Soda', 'Chips']
 console.log(groceryList)
