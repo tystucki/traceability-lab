@@ -25,8 +25,13 @@ rollbar.log('Hello world!')
 const groceryList = ['Buns', 'Ground Beef', 'Lettuce', 'Cheese', 'Mayonnaise', 'Soda', 'Chips']
 console.log(groceryList)
 
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'))
+    res.sendFile(path.join(__dirname, '/index.html'))
+})
+
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '/index.js'))
 })
 
 app.get('/api/groceryList', (req, res) => {
